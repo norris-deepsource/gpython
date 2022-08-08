@@ -48,7 +48,7 @@ except TypeError:
 else:
     assert False, "TypeError not raised"
 del f3.__defaults__
-assert f3.__defaults__ == None or f3.__defaults__ == ()
+assert f3.__defaults__ is None or f3.__defaults__ == ()
 
 doc="check __kwdefaults__"
 def f4(*, b=2):
@@ -65,7 +65,7 @@ except TypeError:
 else:
     assert False, "TypeError not raised"
 del f4.__kwdefaults__
-assert f4.__kwdefaults__ == None or f4.__kwdefaults__ == {}
+assert f4.__kwdefaults__ is None or f4.__kwdefaults__ == {}
 
 doc="check __annotations__"
 def f5(a: "potato") -> "sausage":
@@ -80,7 +80,7 @@ except TypeError:
 else:
     assert False, "TypeError not raised"
 del f5.__annotations__
-assert f5.__annotations__ == None or f5.__annotations__ == {}
+assert f5.__annotations__ is None or f5.__annotations__ == {}
 
 doc="check __dict__"
 def f6():

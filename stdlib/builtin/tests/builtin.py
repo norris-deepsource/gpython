@@ -21,16 +21,16 @@ assert abs(-1 << 66) == 1 << 66
 assert abs(-(1 << 66)) == 1 << 66
 
 doc="all"
-assert all((0,0,0)) == False
-assert all((1,1,0)) == False
-assert all(["hello", "world"]) == True
-assert all([]) == True
+assert all((0,0,0)) is False
+assert all((1,1,0)) is False
+assert all(["hello", "world"]) is True
+assert all([]) is True
 
 doc="any"
-assert any((0,0,0)) == False
-assert any((1,1,0)) == True
-assert any(["hello", "world"]) == True
-assert any([]) == False
+assert any((0,0,0)) is False
+assert any((1,1,0)) is True
+assert any(["hello", "world"]) is True
+assert any([]) is False
 
 doc="ascii"
 assert ascii('hello world') == "'hello world'"
@@ -76,7 +76,7 @@ assert eval("1+2") == 3
 doc="exec"
 # smoke test only - see vm/tests/builtin.py for more tests
 glob = {"a":100}
-assert exec("b = a+100", glob) == None
+assert exec("b = a+100", glob) is None
 assert glob["b"] == 200
 
 doc="getattr"

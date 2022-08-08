@@ -104,32 +104,32 @@ assert _100 > _11 > _10 > _2
 doc="logical"
 t = True
 f = False
-assert (f and f) == False
-assert (f and t) == False
-assert (t and f) == False
-assert (t and t) == True
+assert (f and f) is False
+assert (f and t) is False
+assert (t and f) is False
+assert (t and t) is True
 
-assert (f and f and f) == False
-assert (f and f and t) == False
-assert (f and t and f) == False
-assert (f and t and t) == False
-assert (t and f and f) == False
-assert (t and f and t) == False
-assert (t and t and f) == False
-assert (t and t and t) == True
+assert (f and f and f) is False
+assert (f and f and t) is False
+assert (f and t and f) is False
+assert (f and t and t) is False
+assert (t and f and f) is False
+assert (t and f and t) is False
+assert (t and t and f) is False
+assert (t and t and t) is True
 
-assert (f or f) == False
-assert (f or t) == True
-assert (t or f) == True
-assert (t or t) == True
+assert (f or f) is False
+assert (f or t) is True
+assert (t or f) is True
+assert (t or t) is True
 
-assert (f or f or f) == False
-assert (f or f or t) == True
-assert (f or t or f) == True
-assert (f or t or t) == True
-assert (t or f or f) == True
-assert (t or f or t) == True
-assert (t or t or f) == True
-assert (t or t or t) == True
+assert (f or f or f) is False
+assert (f or f or t) is True
+assert (f or t or f) is True
+assert (f or t or t) is True
+assert (t or f or f) is True
+assert (t or f or t) is True
+assert (t or t or f) is True
+assert (t or t or t) is True
 
 doc="finished"
