@@ -26,7 +26,7 @@ assert a.get('a') == 1
 assert a.get('a',100) == 1
 assert a.get('b') == None
 assert a.get('b',1) == 1
-assert a.get('b',True) == True
+assert a.get('b',True) is True
 
 doc="check items"
 a = {"a":"b","c":5.5}
@@ -45,14 +45,14 @@ assert not a.__contains__('world')
 
 doc="__eq__, __ne__"
 a = {'a': 'b'}
-assert a.__eq__(3) != True
-assert a.__ne__(3) != False
-assert a.__ne__(3) != True
-assert a.__ne__(3) != False
+assert a.__eq__(3) is not True
+assert a.__ne__(3) is not False
+assert a.__ne__(3) is not True
+assert a.__ne__(3) is not False
 
-assert a.__ne__({}) == True
-assert a.__eq__({'a': 'b'}) == True
-assert a.__ne__({'a': 'b'}) == False
+assert a.__ne__({}) is True
+assert a.__eq__({'a': 'b'}) is True
+assert a.__ne__({'a': 'b'}) is False
 
 doc="__len__"
 a = {"a": "1", "b": "2"}

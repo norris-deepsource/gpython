@@ -35,7 +35,7 @@ assert str(float("1.00")) == "1.0"
 assert str(float("2.010")) == "2.01"
 
 doc="is_integer"
-assert (1.0).is_integer() == True
-assert (2.3).is_integer() == False
+assert (1.0).is_integer() is True
+assert (2.3).is_integer() is False
 
 doc="finished"

@@ -20,14 +20,14 @@ else:
 
 ## FIXME(sbinet): check returned value with a known one
 ## (ie: when os.mkdir is implemented)
-if os.getcwd() == None:
+if os.getcwd() is None:
     print("os.getcwd() == None !")
 else:
     print("os.getcwd() != None [OK]")
 
 ## FIXME(sbinet): check returned value with a known one
 ## (ie: when os.mkdir is implemented)
-if os.getcwdb() == None:
+if os.getcwdb() is None:
     print("os.getcwdb() == None !")
 else:
     print("os.getcwdb() != None [OK]")

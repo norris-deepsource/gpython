@@ -83,13 +83,13 @@ assert 5 in c
 
 doc="__eq__, __ne__"
 a = set([1,2,3])
-assert a.__eq__(3) != True
-assert a.__ne__(3) != False
-assert a.__ne__(3) != True
-assert a.__ne__(3) != False # This part should be changed in comparison with NotImplemented
+assert a.__eq__(3) is not True
+assert a.__ne__(3) is not False
+assert a.__ne__(3) is not True
+assert a.__ne__(3) is not False # This part should be changed in comparison with NotImplemented
 
-assert a.__ne__(set()) == True
-assert a.__eq__({1,2,3}) == True
-assert a.__ne__({1,2,3}) == False
+assert a.__ne__(set()) is True
+assert a.__eq__({1,2,3}) is True
+assert a.__ne__({1,2,3}) is False
 
 doc="finished"

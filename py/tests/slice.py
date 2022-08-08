@@ -4,9 +4,9 @@
 
 doc="slice"
 a = slice(10)
-assert a.start == None
+assert a.start is None
 assert a.stop == 10
-assert a.step == None
+assert a.step is None
 
 a = slice(0, 10, 1)
 assert a.start == 0

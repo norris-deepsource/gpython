@@ -64,7 +64,7 @@ assert state == "not started"
 assert next(generator) == 1
 assert state == "started"
 
-assert next(generator) == None
+assert next(generator) is None
 assert state == "started"
 
 assert generator.send(2) == 2
@@ -73,7 +73,7 @@ assert state == "started"
 assert generator.send(3) == 3
 assert state == "started"
 
-assert next(generator) == None
+assert next(generator) is None
 assert state == "started"
 
 # FIXME not implemented

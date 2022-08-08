@@ -49,13 +49,13 @@ else:
     
 doc="exec"
 glob = {"a":100}
-assert exec("b = a+100", glob) == None
+assert exec("b = a+100", glob) is None
 assert glob["b"] == 200
 loc = {"c":23}
-assert exec("d = a+b+c", glob, loc) == None
+assert exec("d = a+b+c", glob, loc) is None
 assert loc["d"] == 323
 co = compile("d = a+b+c+1", "s", "exec")
-assert eval(co, glob, loc) == None
+assert eval(co, glob, loc) is None
 assert loc["d"] == 324
 
 try:
